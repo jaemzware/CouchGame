@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="XIJ-dS-2qZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Couch View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="CouchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4q7-Yu-Ii7"/>
+                        <viewControllerLayoutGuide type="bottom" id="jjs-G7-Xd4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" userLabel="gameboard" colorLabel="IBBuiltInLabel-Green">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEw-Ch-Drd">
+                                <rect key="frame" x="12" y="20" width="269" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.12955538788496079" green="1" blue="0.057347750004943077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="gameboard" label="gameboard">
+                            <accessibilityTraits key="traits" image="YES" playsSound="YES" allowsDirectInteraction="YES"/>
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                    </view>
+                    <navigationItem key="navigationItem" id="rZi-cs-cRd"/>
+                    <connections>
+                        <outlet property="score" destination="OEw-Ch-Drd" id="3YP-vk-mzq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1494.2028985507247" y="-198.88392857142856"/>
+        </scene>
+        <!--Start Game View Controller-->
+        <scene sceneID="A6y-AD-SDU">
+            <objects>
+                <viewController id="pTQ-id-Nxa" customClass="StartGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q5d-vM-TS9"/>
+                        <viewControllerLayoutGuide type="bottom" id="fFG-Vc-09o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qby-GO-Ie6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Couch Game!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbx-Bv-zmI">
+                                <rect key="frame" x="29" y="75" width="356" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="title-height"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbA-Jn-8qr">
+                                <rect key="frame" x="20" y="143" width="374" height="43"/>
+                                <string key="text">Move the couch with your finger, and tap it to shoot fire bullets at falling objects to gain points. Inaccuracy, stray objects, and death cause loss of points. Enjoy!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eb3-e8-p5l">
+                                <rect key="frame" x="157" y="216" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="button-height"/>
+                                    <constraint firstAttribute="width" constant="100" id="button-width"/>
+                                </constraints>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="push" id="8KE-Ed-Yka"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4M-dx-h5l">
+                                <rect key="frame" x="20" y="286" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQM-Kj-bMB">
+                                <rect key="frame" x="20" y="317" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Eb3-e8-p5l" firstAttribute="centerX" secondItem="Qby-GO-Ie6" secondAttribute="centerX" id="button-center"/>
+                            <constraint firstItem="Eb3-e8-p5l" firstAttribute="top" secondItem="hbA-Jn-8qr" secondAttribute="bottom" constant="30" id="button-top"/>
+                            <constraint firstItem="hbA-Jn-8qr" firstAttribute="leading" secondItem="Qby-GO-Ie6" secondAttribute="leading" constant="20" id="instructions-leading"/>
+                            <constraint firstItem="hbA-Jn-8qr" firstAttribute="top" secondItem="pbx-Bv-zmI" secondAttribute="bottom" constant="20" id="instructions-top"/>
+                            <constraint firstAttribute="trailing" secondItem="hbA-Jn-8qr" secondAttribute="trailing" constant="20" id="instructions-trailing"/>
+                            <constraint firstItem="BQM-Kj-bMB" firstAttribute="leading" secondItem="Qby-GO-Ie6" secondAttribute="leading" constant="20" id="score-leading"/>
+                            <constraint firstItem="F4M-dx-h5l" firstAttribute="leading" secondItem="Qby-GO-Ie6" secondAttribute="leading" constant="20" id="score-message-leading"/>
+                            <constraint firstItem="F4M-dx-h5l" firstAttribute="top" secondItem="Eb3-e8-p5l" secondAttribute="bottom" constant="30" id="score-message-top"/>
+                            <constraint firstAttribute="trailing" secondItem="F4M-dx-h5l" secondAttribute="trailing" constant="20" id="score-message-trailing"/>
+                            <constraint firstItem="BQM-Kj-bMB" firstAttribute="top" secondItem="F4M-dx-h5l" secondAttribute="bottom" constant="10" id="score-top"/>
+                            <constraint firstAttribute="trailing" secondItem="BQM-Kj-bMB" secondAttribute="trailing" constant="20" id="score-trailing"/>
+                            <constraint firstItem="pbx-Bv-zmI" firstAttribute="leading" secondItem="Qby-GO-Ie6" secondAttribute="leading" constant="29" id="title-leading"/>
+                            <constraint firstItem="pbx-Bv-zmI" firstAttribute="top" secondItem="Q5d-vM-TS9" secondAttribute="bottom" constant="27" id="title-top"/>
+                            <constraint firstAttribute="trailing" secondItem="pbx-Bv-zmI" secondAttribute="trailing" constant="29" id="title-trailing"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="InstructionsLabel" destination="hbA-Jn-8qr" id="Npl-1u-Ogu"/>
+                        <outlet property="ScoreLabel" destination="BQM-Kj-bMB" id="C2D-JL-NGF"/>
+                        <outlet property="ScoreMessage" destination="F4M-dx-h5l" id="ix5-Ea-aHE"/>
+                        <outlet property="StartGameButton" destination="Eb3-e8-p5l" id="EY4-8m-1p6"/>
+                        <outlet property="TitleLabel" destination="pbx-Bv-zmI" id="5uj-Oa-dCb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLW-sa-Evc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707" y="7"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hT4-NT-K72">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="XIJ-dS-2qZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jbT-sK-N0F">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pTQ-id-Nxa" kind="relationship" relationship="rootViewController" id="M4U-8r-Fk7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vEE-ox-nBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175.36231884057972" y="16.741071428571427"/>
+        </scene>
+    </scenes>
+</document>
